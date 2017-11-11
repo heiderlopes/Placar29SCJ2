@@ -33,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent proximaTela = new Intent(SplashActivity.this,
-                        MainActivity.class);
+                        LoginActivity.class);
                 startActivity(proximaTela);
                 SplashActivity.this.finish();
             }
