@@ -1,5 +1,7 @@
 package br.com.fiap.placar;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -26,5 +28,15 @@ public class SplashActivity extends AppCompatActivity {
         animacaoLogo.reset();
         ivLogo.clearAnimation();
         ivLogo.startAnimation(animacaoLogo);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent proximaTela = new Intent(SplashActivity.this,
+                        MainActivity.class);
+                startActivity(proximaTela);
+                SplashActivity.this.finish();
+            }
+        }, 3500);
     }
 }
